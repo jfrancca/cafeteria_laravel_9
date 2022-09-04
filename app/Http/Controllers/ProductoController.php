@@ -38,11 +38,15 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-        // $request->validate([
-        //     'nombre' => 'required',
-        //     'cantidad' => 'required',
-        // ]);
+        $request->validate([
+            'nombre' => 'required',
+            'referencia' => 'required',
+            'precio' => 'required',
+            'peso' => 'required',
+            'categoria' => 'required',
+            'stock' => 'required',
+            'fecha' => 'required',
+        ]);
 
         Producto::create([
             'nombre' => $request->nombre,
@@ -52,7 +56,6 @@ class ProductoController extends Controller
             'categoria' => $request->categoria,
             'stock' => $request->stock,
             'fecha' => $request->fecha,
-            // 'categoria' => $categoria_id->id,
         ]);
      
         return redirect()->route('productos.index')->with('success','Producto creado correctamente.');
@@ -79,10 +82,15 @@ class ProductoController extends Controller
     public function update(Request $request, Producto $producto)
     {
 
-        // $request->validate([
-        //     'nombre' => 'required',
-        //     'cantidad' => 'required',
-        // ]);
+        $request->validate([
+            'nombre' => 'required',
+            'referencia' => 'required',
+            'precio' => 'required',
+            'peso' => 'required',
+            'categoria' => 'required',
+            'stock' => 'required',
+            'fecha' => 'required',
+        ]);
         
         $producto->update($request->all());
     
