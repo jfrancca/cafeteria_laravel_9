@@ -3,13 +3,13 @@
 
 ## Cafetería Laravel 9
 
-Aplición para la gestión de inventario de productos de una cafetería, incluye sistemas de registro de usuario, sección que lista los productos, edición, eliminación,  módulo de venta de producto el cual resta la cantidad del producto en el stock y suma la cantidad de productos vendidos.
+Aplicación para la gestión de inventario de productos de una cafetería, incluye sistemas de registro de usuario, sección que lista los productos, edición, eliminación,  módulo de venta de producto, el cual resta la cantidad del producto en el stock y suma la cantidad de productos vendidos.
 
 ##  Consideraciones para ejecutar el proyecto
 
 - El proyecto incluye sail Docker.
 
-- Despues de clonar el proyecto de GitHub, ejecutar: 
+- Después de clonar el proyecto de GitHub, ejecutar: 
 docker run --rm --interactive --tty -v $(pwd):/app composer install
 o revisar la documentación oficial de Laravel: 
 https://laravel.com/docs/9.x/sail#executing-node-npm-commands
