@@ -26,11 +26,10 @@ class VentaController extends Controller
      */
     public function store(Request $request, Producto $producto, Venta $venta)
     {
-        // dd($request);
-        // $request->validate([
-        //     'nombre' => 'required',
-        //     'cantidad' => 'required',
-        // ]);
+        $request->validate([
+            'id' => 'required',
+            'cantidad' => 'required',
+        ]);
         
         $count_produto = Producto::where('id', $request->id)->first();
         $count_venta = Venta::where('producto_id', $request->id)->count();
